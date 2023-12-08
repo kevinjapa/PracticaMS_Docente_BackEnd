@@ -12,19 +12,20 @@ public class Curso
     private int id;
     private String nombre;
     private float horas;
-    private String docente;
-    private String estudiante;
+
+    @ManyToOne
+    @JoinColumn(name = "docente_id")
+    private Docente docente;
 
     public Curso() {
 
     }
 
-    public Curso(int id, String nombre, float horas, String docente, String estudiante) {
+    public Curso(int id, String nombre, float horas, Docente docente) {
         this.id = id;
         this.nombre = nombre;
         this.horas = horas;
         this.docente = docente;
-        this.estudiante = estudiante;
     }
 
     public int getId() {
@@ -51,20 +52,12 @@ public class Curso
         this.horas = horas;
     }
 
-    public String getDocente() {
+    public Docente getDocente() {
         return docente;
     }
 
-    public void setDocente(String docente) {
+    public void setDocente(Docente docente) {
         this.docente = docente;
-    }
-
-    public String getEstudiante() {
-        return estudiante;
-    }
-
-    public void setEstudiante(String estudiante) {
-        this.estudiante = estudiante;
     }
 }
 
