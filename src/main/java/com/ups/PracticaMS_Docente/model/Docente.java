@@ -19,6 +19,7 @@ public class Docente
     public Docente() {
 
     }
+
     public Docente(String cedula, String nombre, String apellido, String correo, String contrasenia) {
         this.cedula = cedula;
         this.nombre = nombre;
