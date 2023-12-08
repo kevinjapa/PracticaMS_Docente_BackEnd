@@ -25,8 +25,7 @@ public class CursoControlador {
         try{
             return ResponseEntity.created(new URI("/MS2/Curso/guardar"+c.getId())).body(c);
         }
-        catch (Exception ex)
-        {
+        catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
